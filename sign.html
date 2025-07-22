@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FONT LINKS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!--icon links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="sign.css">
+    <title>SIGN IN PAGE</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Create Account</h1>
+            <p class="login-prompt">Already have an account? <a href="../index.html">LOGIN</a></p>
+
+            <form id="signupForm">
+                <div class="input-group">
+                    <input type="text" placeholder="Username" id="username" required>
+                </div>
+                <div class="input-row">
+                    <div class="input-group half-width">
+                        <input type="text" placeholder="First Name" id="firstName" required>
+                    </div>
+                    <div class="input-group half-width">
+                        <input type="text" placeholder="Last Name" id="lastName" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Email" id="email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit">Sign up</button>
+            </form>
+        </div>
+    </div>
+    <div id="messageBox" class="message-box hidden"></div>
+    <script src="sign.js"></script>
+</body>
+</html>

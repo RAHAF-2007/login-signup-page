@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #31004a; /* A purple hue to match the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    background-color: #1a1a1a; /* Dark background for the card */
+    border-radius: 20px; /* Rounded corners for the card */
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 450px; /* Adjust as needed */
+    width: 100%;
+    color: #fff; /* White text for contrast */
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.login-prompt {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.login-prompt a {
+    color: #1e90ff; /* A shade of blue for the link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-prompt a:hover {
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between input groups */
+}
+
+.input-group {
+    width: 100%;
+    text-align: left;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px; /* Space between first name and last name inputs */
+    width: 100%;
+}
+
+.input-group.half-width {
+    flex: 1; /* Allows them to take equal space */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 30px); /* Adjust padding */
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #333; /* Darker background for inputs */
+    color: #fff;
+    font-size: 1em;
+    outline: none; /* Remove focus outline */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #888; /* Placeholder text color */
+}
+
+button[type="submit"] {
+    background-color: #1e90ff; /* Blue button */
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #147ad1; /* Darker blue on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .card {
+        padding: 25px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .input-row {
+        flex-direction: column;
+        gap: 0; /* Remove gap for single column layout */
+    }
+
+    .input-group.half-width {
+        margin-bottom: 20px; /* Add space between stacked inputs */
+    }
+
+    .input-group.half-width:last-child {
+        margin-bottom: 0;
+    }
+}
+.message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #614caf;
+    color: white;
+    padding: 30px 50px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.message-box.show {
+    opacity: 1;
+}
+
+.message-box.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
